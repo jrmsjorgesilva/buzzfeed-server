@@ -1,9 +1,8 @@
 import Route, { Response, Request } from "express";
+import getQuiz from "../controllers/quizController";
 
 const quizRouter = Route();
 
-quizRouter.get("/", async (req: Request, res: Response) => {
-  res.send("Quiz Route");
-});
+quizRouter.get("/", getQuiz);
 
 export default quizRouter;
